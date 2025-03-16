@@ -14,9 +14,10 @@ openai-whisper==20240930
 opencv-python-headless==4.5.5.64
 Pillow==11.1.0
 pydub==0.25.1
-setuptools  # Fix for distutils error
+setuptools==69.5.1  # Fixes distutils issue
+wheel==0.42.0  # Helps with installation
 streamlit==1.43.2
 toml==0.10.2
-tornado==6.2  # Fix for jupyter-client conflict
-vosk==0.3.45  # Fix for incorrect vosk version
+tornado==6.2
+vosk==0.3.45
 youtube-dl==2021.12.17
