@@ -16,6 +16,6 @@ Pillow==11.1.0
 pydub==0.25.1
 streamlit==1.43.2
 toml==0.10.2
-tornado==6.1
-vosk==0.3.43
+tornado==6.2
+vosk==0.3.45
 youtube-dl==2021.12.17
