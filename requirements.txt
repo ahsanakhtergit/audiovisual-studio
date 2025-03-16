@@ -14,9 +14,8 @@ openai-whisper==20240930
 opencv-python-headless==4.5.5.64
 Pillow==11.1.0
 pydub==0.25.1
-pyOpenSSL==25.0.0
 streamlit==1.43.2
 toml==0.10.2
-tornado==6.4.2
-vosk==0.3.45
+tornado==6.1
+vosk==0.3.43
 youtube-dl==2021.12.17
