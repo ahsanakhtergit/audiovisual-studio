@@ -1,0 +1,23 @@
+{
+    "text_design": {
+        "text_color": "#FFFFFF",
+        "font_size": 1.0,
+        "font_family": "arial.ttf",
+        "outline_color": "#000000",
+        "outline_thickness": 1,
+        "shadow_color": "#333333",
+        "shadow_opacity": 0.5
+    },
+    "content_positioning": {
+        "text_alignment": "center",
+        "bg_color": "#B22222",
+        "bg_opacity": 1.0
+    },
+    "animation_effects": {
+        "highlight_color": "#FF0000",
+        "highlight_bg_color": "#FFFF00",
+        "highlight_bg_opacity": 0.5,
+        "animation_type": "None",
+        "animation_speed": 1.5
+    }
+}

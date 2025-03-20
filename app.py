@@ -4,8 +4,13 @@ from tts_tool import tts_tool
 from mp3_to_mp4_tool import mp3_to_mp4_tool
 from mp4_subtitle_animation_tool import mp4_subtitle_animation_tool
 from mp3_word_timestamp_tool import mp3_word_timestamp_tool  # New Import
+from template_designer_tool import template_designer_tool  # ✅ Function Import
 
-# Set page configuration
+
+
+
+
+# ✅ Keep only ONE set_page_config call
 st.set_page_config(
     page_title="AudioVisual Studio",
     page_icon="🎥",
@@ -64,7 +69,7 @@ st.title("🎥 AudioVisual Studio")
 st.markdown("---")
 
 # Cards for the tools
-col1, col2, col3, col4 = st.columns(4)  # Adjusted columns after removing MP4 Animation
+col1, col2, col3, col4, col5 = st.columns(5)  # Added extra column for Template Designer
 
 with col1:
     if st.button("📝 Text-to-Speech"):
@@ -77,14 +82,19 @@ with col2:
     st.markdown("""<div class="card"><h3>🎧 MP3 to MP4</h3><p>Convert MP3 files to MP4 videos.</p></div>""", unsafe_allow_html=True)
 
 with col3:
-    if st.button("🎮 MP4 Subtitle Animation"):
-        st.session_state.selected_tool = "MP4 Subtitle Animation"
-    st.markdown("""<div class="card"><h3>🎮 MP4 Subtitle Animation</h3><p>Create animated subtitles for videos.</p></div>""", unsafe_allow_html=True)
-
-with col4:
     if st.button("🎤 MP3 Word Timestamps"):
         st.session_state.selected_tool = "MP3 Word Timestamps"
     st.markdown("""<div class="card"><h3>🎤 MP3 Word Timestamps</h3><p>Generate word-level speech timestamps.</p></div>""", unsafe_allow_html=True)
+
+with col4:   
+    if st.button("🎮 MP4 Subtitle Animation"):
+        st.session_state.selected_tool = "MP4 Subtitle Animation"
+    st.markdown("""<div class="card"><h3>🎮 MP4 Subtitle Animation</h3><p>Create animated subtitles for videos.</p></div>""", unsafe_allow_html=True)    
+
+with col5:
+    if st.button("🎨 Template Designer"):
+        st.session_state.selected_tool = "Template Designer"
+    st.markdown("""<div class="card"><h3>🎨 Template Designer</h3><p>Create and apply subtitle styles.</p></div>""", unsafe_allow_html=True)
 
 # Tool Sections
 st.markdown("---")
@@ -95,8 +105,11 @@ elif st.session_state.selected_tool == "MP3 to MP4":
     mp3_to_mp4_tool()
 elif st.session_state.selected_tool == "MP4 Subtitle Animation":
     mp4_subtitle_animation_tool()
-elif st.session_state.selected_tool == "MP3 Word Timestamps":  # New case
-    mp3_word_timestamp_tool()
+elif st.session_state.selected_tool == "MP3 Word Timestamps":
+    mp3_word_timestamp_tool()    
+    # Correct function call inside condition
+elif st.session_state.selected_tool == "Template Designer":
+    template_designer_tool()  # ✅ Correct Function Call
 
 st.markdown("---")
 st.markdown("© 2025 AudioVisual Studio. All rights reserved.")

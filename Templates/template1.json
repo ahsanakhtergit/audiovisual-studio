@@ -1,0 +1,56 @@
+{
+    "text_design": {
+        "font_style": "Arial",
+        "font_weight": "Bold",
+        "font_size": 1.5,
+        "text_color": "#FFFFFF",
+        "highlight_color": "#FF0000",
+        "stroke_color": "#000000",
+        "stroke_thickness": 5,
+        "shadow_color": "#000000",
+        "shadow_opacity": 0.8,
+        "shadow_blur": 5,
+        "letter_spacing": 0,
+        "line_spacing": 1.2,
+        "text_alignment": "center",
+        "text_case": "uppercase", 
+		"italic": true 
+    },
+    "content_positioning": {
+        "text_position": "center",
+        "box_position": "fixed",
+        "padding_x": 30,
+        "padding_y": 20,
+        "box_width": "100%",
+        "box_height": "auto",
+        "bg_color": "#FFFF99",
+        "bg_opacity": 1.0,
+        "multi_line": false,
+        "max_line_chars": 40,
+        "adaptive_scaling": true,
+        "show_box": false,
+        "box_vertical_position": 850
+    },
+    "animation_effects": {
+        "word_highlight_timing": "gradual",
+        "fade_in": true,
+        "fade_out": true,
+        "entry_animation": "slide-in",
+        "karaoke_effect": true,
+        "typing_effect": false,
+        "extra_effects": ["wave"],
+        "animation_speed": 1.5,
+        "sentence_transition": "fade"
+    },
+	"emoji_config": {
+        "emoji_path": "assets/jesus-christ-981.png", 
+        "emoji_scale": 0.3,        
+        "emoji_offset_y": -10,      
+        "emoji_opacity": 0.20  ,
+		"emoji_position": "top-center"	,
+		"emoji_margin_x": 20,                      
+		"emoji_margin_y": 0      	
+    }
+}
+
+
